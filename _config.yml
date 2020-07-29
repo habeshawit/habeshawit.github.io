@@ -1,11 +1,11 @@
 # Site settings
 author: Shalom Kebede
-title: 
+title: My Coding Journey
 header-img: img/home-bg.png
 email: shalomseleshi@gmail.com
 copyright_name: Shalom Kebede
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Career Change Into Tech
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  habeshawit

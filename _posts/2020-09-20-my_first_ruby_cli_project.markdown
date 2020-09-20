@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My First Ruby CLI Project!"
-date:       2020-09-20 05:55:56 +0000
+date:       2020-09-20 01:55:56 -0400
 permalink:  my_first_ruby_cli_project
 ---
 
@@ -12,7 +12,7 @@ To start off, I had to come up with an idea, which should have been the easiest 
 
 I love to travel so I decided to go with my World Traveller ruby gem, which scrapes Lonely Planet for top travel highlights in each destination. This time, I made sure to check if I can scrape the information I need first before starting to code! A great way to do so was using [this](https://repl.it/repls/OccasionalCourteousViruses#main.rb)
 
-Next, I watched a ton of videos! Avi's walkthrough of the CLI project on learn.co as well the live build [here](http://https://rb.gy/sxs1ge) were incredibly useful resources.
+Next, I watched a ton of videos! Avi's walkthrough of the CLI project on learn.co as well the live build [here](https://www.youtube.com/watch?v=KwBMwZ89Hj8&list=PLc6AmvC5Zybybc-NjUUwQwTtUEXH4iB2s&index=2&t=0s) were incredibly useful resources.
 
 **2. What the Gem Does**
 World Traveller gem displays a list of continents to users, asking them where they would like to explore. It then displays travel highlights for the user's continent of choice. Next, it prompts users to choose a highlight they would like to learn more about and displays details for that highlight. 
@@ -27,9 +27,9 @@ Before scraping, I had to set up the structure of the gem. First thing was to ru
 **5. Coding my classes!**
 I started with coding the scraper class. Unlike my initial tech career project, thankfully Lonely Planet did not put data in tables! After playing around with scraper to make sure I was getting the intended data, I was ready to start! Using **Nokogiri** I was able to successfully scrape continents and highlights.
 
-Next i worked on my Continents class, responsible for instantiating new instances of continents once scraped when the gem runs. I then worked on a Highlights class reponsible for initializing new instances of highlights. But I didn't want all the highlights being scraped at once like the continents. That would be a whole lot of data! I had to set up the class to acess the scraper only when the user choses a highlight to look into. In order to do so, I had to link the classes by passing the return values of one class as an argument into another class.
+Next i worked on my Continents class, responsible for instantiating new instances of continents once scraped when the gem runs. I then worked on a Highlights class reponsible for initializing new instances of highlights. But I didn't want all the highlights being scraped at once like the continents. That would be a whole lot of data! I had to set up the class to acess the scraper only when the user choses a highlight to look into. In order to do so, I had to link the classes by passing the return values of one method as an argument into another.
 
-I also had to set up the classes to check if user input was valid i.e. it was an integer and within the choices given. 
+I also had to set up the methods to check if user input was valid i.e. it was an integer and within the choices given. 
 
 After alot of work tweeking and re-tweeking the code, it was finally working! I was able to design the user interface that I wanted. I still had a day or two before the deadline, so I decided to have a bit more fun with it and add some art and color. I used a cool gem called **[colorize](https://rubygems.org/gems/colorize/versions/0.8.1)** to get color. I also learned that you can add some ASCII art to make it add a bit of art. A google search for *"ASCII art generator"* helped me find one that worked for me.
 

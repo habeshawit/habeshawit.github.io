@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My Rails Project"
-date:       2021-01-25 08:10:36 +0000
+date:       2021-01-25 03:10:37 -0500
 permalink:  my_rails_project
 ---
 
@@ -13,7 +13,8 @@ These are the associations I set up for my two main models:
 
 
 User:
-  `has_many :recipes, dependent: :destroy
+```
+  has_many :recipes, dependent: :destroy
   has_many :comments, :dependent => :destroy
   has_many :commented_recipes, through: :comments, source: :recipe
   has_many :friendships, :dependent => :destroy
@@ -25,8 +26,9 @@ User:
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  devise :omniauthable, :omniauth_providers => [:facebook]`
+  devise :omniauthable, :omniauth_providers => [:facebook]
  
+```
  Recipe:
  ` belongs_to :user
   belongs_to :category

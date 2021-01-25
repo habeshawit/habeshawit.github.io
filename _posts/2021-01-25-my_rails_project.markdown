@@ -30,7 +30,8 @@ User:
  
 ```
  Recipe:
- ` belongs_to :user
+```
+ belongs_to :user
   belongs_to :category
   has_many :comments, :dependent => :destroy
   has_many :commented_users, through: :comments, source: :user
@@ -47,7 +48,8 @@ User:
 
   scope :most_commented, -> {left_joins(:comments).group('recipes.id').order('count(recipes.id) desc')}
 
-  has_many_attached :images`
+  has_many_attached :images
+```
   
  
 I also had a few other models, namely:

@@ -63,7 +63,7 @@ I also had a few other models, namely:
 
 Some of the gems I found to be great were:
 1. Devise - The first model I set up was my user model. Devise worked great for setting up user authentication. After adding the devise gem to my gemfile and running bundle install, I used $ rails generate devise:install to install devise. Next, I generated the user model by using $ rails generate devise MODEL and ran rails db:migrate to set up the user table
-2. Facebook omniauth - I also integrated devise with facebook omniauth to give users the option to sign in using their facebook account. I found [this resoucre](http://https://medium.com/@trydelight/facebook-authentication-with-devise-5b53d2f664ed) to be quite useful in setting up the integration
+2. Facebook omniauth - I also integrated devise with facebook omniauth to give users the option to sign in using their facebook account. I found [this resource](http://https://medium.com/@trydelight/facebook-authentication-with-devise-5b53d2f664ed) to be quite useful in setting up the integration
  
 2. Bootstrap - Bootstrap was great for styling the page. In fact, I used [boostrap](http://https://github.com/hisea/devise-bootstrap-views) to create styled views for the user instead of using devise:views
 

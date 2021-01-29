@@ -69,6 +69,6 @@ Some of the gems I found to be great were:
 
 3. Cocoon - I used [gem cocoon](http://https://github.com/nathanvda/cocoon) to set up my nested forms.  Ingredients and instructions were nested into the new recipe creation form.
 
-4. Font-awesome-rails - I also used this gem to add come icons for styling purposes.
+4. Font-awesome-rails - I also used this gem to add some icons for styling purposes.
 
 Overall, this was a fun project and I hope to expand on it in the future!

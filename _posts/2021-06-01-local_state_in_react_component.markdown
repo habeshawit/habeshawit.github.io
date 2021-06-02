@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Local State in React Component"
-date:       2021-06-01 23:50:48 +0000
+date:       2021-06-01 19:50:48 -0400
 permalink:  local_state_in_react_component
 ---
 
@@ -42,7 +42,7 @@ const handleVote = () =>{
 
 I added a button on the page, so that each item would have the UpVote option as below:
 
-![](https://drive.google.com/file/d/10PjR-dT9RyaLDPhiMn_3siTE6BlmsU0e/view?usp=sharing)
+![Item List View](http://https://drive.google.com/file/d/10PjR-dT9RyaLDPhiMn_3siTE6BlmsU0e/view?usp=sharing)
 
 
 ## The Problem
@@ -87,7 +87,7 @@ const Item = ({user, id, image_url, name, price, userId, handleDelete}) => {
 
 What this accomplishes is that now each item is its own component and could keep track of its own local state (i.e. upvote count). The handleVote method will then update the local state by incrementing the vote count just for that item. Thus, when a user click on 'Upvote' for one item, only that item's upvote count increments. Success!
 
-![](https://drive.google.com/file/d/1qJpFhSIPecAaqdVt631QCd3PLgn5637y/view?usp=sharing)
+![Item List](https://drive.google.com/file/d/1qJpFhSIPecAaqdVt631QCd3PLgn5637y/view?usp=sharing)
 
 
 

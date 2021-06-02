@@ -42,7 +42,7 @@ const handleVote = () =>{
 
 I added a button on the page, so that each item would have the UpVote option as below:
 
-![Item List View](http://https://drive.google.com/file/d/10PjR-dT9RyaLDPhiMn_3siTE6BlmsU0e/view?usp=sharing)
+![Item List View](https://drive.google.com/file/d/10PjR-dT9RyaLDPhiMn_3siTE6BlmsU0e/view?usp=sharing)
 
 
 ## The Problem

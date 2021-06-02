@@ -29,7 +29,7 @@ export const getItems = () => {
 }
 ```
 
-One of the functionalities I tried to add was an option for users to 'UpVote' an item. Initally, I tried to accomplish this by creating a local state (using a useState hook) that keep track of the number of times an item has been updated. I also wrote a "handleVote" function that would increment the count of UpVotes when the user clicks on it. 
+One of the functionalities I tried to add was an option for users to 'UpVote' an item. Initally, I tried to accomplish this by creating a local state (using a useState hook) that keeps track of the number of times an item has been updated. I also wrote a "handleVote" function that would increment the count of UpVotes when the user clicks on it. 
 
 ```
 const [count, setCount] = useState(0);
@@ -40,7 +40,7 @@ const handleVote = () =>{
  )
 ```
 
-I added a button on the page, so that each item would have the UpVote option as below:
+I added a button on the page, so that each item would have the UpVote option:
 
 ![Item List View](https://drive.google.com/file/d/10PjR-dT9RyaLDPhiMn_3siTE6BlmsU0e/view?usp=sharing)
 
@@ -82,13 +82,13 @@ This would allow me to iterate through Items array and for each item, render an 
 
 ```
 <div className= "row">
-				{props.items.map(item => 
-							<Item {...item} userId={props.user.id} handleDelete={handleDelete} key={`item${item.id}`}/>
-				)}
+    {props.items.map(item => 
+		     <Item {...item} userId={props.user.id} handleDelete={handleDelete} key={`item${item.id}`}/>
+		)}
 </div>
 ```
 
-What this accomplishes is that now each item is its own component and could keep track of its own local state (i.e. upvote count). The handleVote method will then update the local state by incrementing the vote count just for that item. Thus, when a user click on 'Upvote' for one item, only that item's upvote count increments. Success!
+What this accomplishes is that now each item is its own component and could keep track of its own local state (i.e. upvote count). The handleVote method will then update the local state by incrementing the vote count just for that item. Thus, when a user click on 'Upvote' for one item, only that item's state would be updated. Success!
 
 ![Item List](https://drive.google.com/file/d/1qJpFhSIPecAaqdVt631QCd3PLgn5637y/view?usp=sharing)
 

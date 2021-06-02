@@ -6,7 +6,7 @@ permalink:  local_state_in_react_component
 ---
 
 
-For my final project, I worked on a React app that allows users to sell to and buy items from one another. In order to display existing items to the user, I created an 'ItemsList' component, using useEffect hook to dispatch my "getItems" acton that fetched all existing items from my Rails backend API as below.
+For my final project, I worked on a React app that allows users to sell to and buy items from one another. In order to display existing items to the user, I created an 'ItemsList' component, using useEffect hook to dispatch my "getItems" action that fetched all existing items from my Rails backend API as below.
 
 ```
 useEffect(() => {

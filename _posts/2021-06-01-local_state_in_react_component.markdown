@@ -49,15 +49,7 @@ I added a button on the page, so that each item would have the UpVote option as 
 Although this seemed like a quick, simple way to add this functionality, I ran into a problem. Everytime a user clicks on the upvote button, the upvote count of ALL items were incremented! Definitely NOT the user experience I was looking for. But it made sense why. I had set the state for the entire ItemsList component. So when I incremented the upvote count in the local state by clicking on "Upvote" on any item, that state was shared by all the items.
 
 ## The Solution
-What I really needed was for each item on the page to have its own upvote count. What I needed was for each item to be its own component and keep track of its own upvote count. This was accomplished by creating an Item component and placing it within my ItemsList component. This way, I could iterate through Items array and for each item, render an Item component, passing into it the properties it would need (the item's attributes, the userId, and handleDelete method) from the ItemsList parent component:
-
-```
-<div className= "row">
-				{props.items.map(item => 
-							<Item {...item} userId={props.user.id} handleDelete={handleDelete} key={`item${item.id}`}/>
-				)}
-</div>
-```
+What I really needed was for each item on the page to have its own upvote count. What I needed was for each item to be its own component and keep track of its own upvote count. This was accomplished by creating an Item component and placing it within my ItemsList component. (Alternatively, it could also be put in its own component file and imported into my ItemList component). 
 
 The Item component could then be created as below:
 
@@ -83,6 +75,17 @@ const Item = ({user, id, image_url, name, price, userId, handleDelete}) => {
     : null}  
   </div>  
 }
+```
+
+
+This would allow me to iterate through Items array and for each item, render an Item component, passing into it the properties it would need (the item's attributes, the userId, and handleDelete method) from the ItemsList parent component:
+
+```
+<div className= "row">
+				{props.items.map(item => 
+							<Item {...item} userId={props.user.id} handleDelete={handleDelete} key={`item${item.id}`}/>
+				)}
+</div>
 ```
 
 What this accomplishes is that now each item is its own component and could keep track of its own local state (i.e. upvote count). The handleVote method will then update the local state by incrementing the vote count just for that item. Thus, when a user click on 'Upvote' for one item, only that item's upvote count increments. Success!
